@@ -1,4 +1,4 @@
-# cantina
+# Cantina
 Small application in AngularJs to simulate a School Cafeteria.
 
 ## Purpose
