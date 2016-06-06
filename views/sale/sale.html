@@ -15,13 +15,13 @@
       </a>
     </div>
   </div>
-  <h2>Itens escolhidos</h2>
+  <h2>Selected Items</h2>
   <div>
     <ul class="list-group" ng-repeat="item in saleController.items">
       <li class="list-group-item">
         <div>
           {{item.name}}
-          Quantidade:
+          Quantity:
           <input type="text" size="5" value="1">
           <a ng-click="saleController.removeItem(item)">
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
@@ -35,7 +35,7 @@
     <div>
       <span class="glyhicon glyhicon-search" aria-hidden="true"></span>
     </div>
-    <input type="text" id="inputSearchCustomer" ng-model="searchCustomer" class="form-control" placeholder="encontrar aluno">
+    <input type="text" id="inputSearchCustomer" ng-model="searchCustomer" class="form-control" placeholder="find student">
   </h2>
   <div>
       <ul class="list-group" ng-repeat="customer in saleController.customers | filter: searchCustomer">
@@ -47,6 +47,6 @@
     </ul> 
   </div> 
   <div>
-      <input type="button" ng-click="saleController.post()" value="Finalizar Venda" class="btn btn-info">
+      <input type="button" ng-click="saleController.post()" value="Finish Sale" class="btn btn-info">
   </div>
 </div>
