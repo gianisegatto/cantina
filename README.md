@@ -22,14 +22,15 @@ cd angular-app
 
 ### Platform & tools
 
+Go to the firebase Web siete (https://www.firebase.com/) and create an account.
+Next, go to the management panel and click in create a project
+    Give the name "cantina" to the project
+
 You need to install a Web server or use a simple python web server with this command:
+
 Note: Use this command where the code was cloned
     
     ```
     python -m SimpleHTTPServer 8000
     ```
-    
-Go to the firebase Web siete (https://www.firebase.com/) and create an account.
-Go to the management panel and click in create a project
-    Give the name "cantina" to the project
-
+After these steps the application is running.
