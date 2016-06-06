@@ -1,0 +1,43 @@
+<h2>Produtos</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<div class="list-group">
+				<div class="form-group">
+					<div class="input-group">
+						<div>
+							<div class="input-group-addon">
+								<span class="glyhicon glyhicon-search" aria-hidden="true"></span>
+							</div>
+							<input type="text" ng-model="searchProduct" class="form-control" placeholder="encontrar produto">
+						</div>
+						<br>
+						<a href="#/product" class="btn btn-info">Novo Produto</a>
+					</div>
+				</div>
+				<br>
+				<div ng-controller="ProductController as productController">	
+					<div ng-repeat="product in productController.products | filter: searchProduct">
+						<div class="list-group-item">
+							<a href="#" ng-click="productController.delete(product.$id)">
+								Excluir
+							</a>
+							<a ng-href="#/editproduct/{{product.$id}}">
+							<div class="row-content">
+								<h6 class="list-group-item-heading">{{product.name}}</h6>
+								<span class="list-group-item-text">
+									{{product.description | limitTo: 100}}{{product.description.length > 100 ? "..." : ""}}
+								</span>
+							</div>
+							<div class="payment">
+								<div>{{product.saleAmount | currency}}</div>
+							</div>
+							</a>
+						</div>
+						<div class="list-group-separator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

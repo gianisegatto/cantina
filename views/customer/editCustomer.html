@@ -1,0 +1,92 @@
+<div class="auth-forms title">
+	<h2>Editar Cliente</h2>
+	<form ng-controller="CustomerController as customerController" 
+		  ng-submit="customerController.put(customer)">
+		
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Dados do Aluno</span>
+			</div>
+			<span>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Nome</span>
+			</div>
+			<input type="name" ng-model="customerController.selectedCustomer.name" class="form-control" placeholder="Nome" required>
+		</div>
+		<br>
+		<div class="input-group">	
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Sobrenome</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.lastName" class="form-control" placeholder="Sobrenome" required>
+		</div>
+		<br>
+		<div class="input-group">	
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Nascimento</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.birth" class="form-control" placeholder="Data de Nascimento" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Série</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.grade" class="form-control" placeholder="Grade" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">E-mail</span>
+			</div>
+			<input type="email" ng-model="customerController.selectedCustomer.email" class="form-control" placeholder="E-mail" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Telefone</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.phone" class="form-control" placeholder="Telefone" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Dados do Pai</span>
+			</div>
+			<span></span>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Nome</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.parentName" class="form-control" placeholder="Nome do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Sobrenome</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.parentLastName" class="form-control" placeholder="Sobrenome do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Email</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.parentEmail" class="form-control" placeholder="E-mail do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon" aria-hidden="true">Telefone</span>
+			</div>
+			<input type="text" ng-model="customerController.selectedCustomer.parentPhone" class="form-control" placeholder="Telefone do Pai">
+		</div>
+		<br>
+		<input type="submit" value="Salvar" class="btn btn-info">
+	</form>
+</div>

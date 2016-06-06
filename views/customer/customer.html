@@ -1,0 +1,78 @@
+<div class="auth-forms title">
+	<h2>Criar Cliente</h2>
+	<form ng-controller="CustomerController as customerController" 
+		  ng-submit="customerController.post(customer)">
+		
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="name" ng-model="customer.name" class="form-control" placeholder="Nome" required>
+		</div>
+		<br>
+		<div class="input-group">	
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.lastName" class="form-control" placeholder="Sobrenome" required>
+		</div>
+		<br>
+		<div class="input-group">	
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.birth" class="form-control" placeholder="Data de Nascimento" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.grade" class="form-control" placeholder="Grade" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="email" ng-model="customer.email" class="form-control" placeholder="E-mail" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.phone" class="form-control" placeholder="Telefone" required>
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.parentName" class="form-control" placeholder="Nome do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.parentLastName" class="form-control" placeholder="Sobrenome do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.parentEmail" class="form-control" placeholder="E-mail do Pai">
+		</div>
+		<br>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+			</div>
+			<input type="text" ng-model="customer.parentPhone" class="form-control" placeholder="Telefone do Pai">
+		</div>
+		<br>
+		<input type="submit" value="Salvar" class="btn btn-info">
+	</form>
+</div>

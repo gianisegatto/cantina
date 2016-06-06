@@ -1,0 +1,40 @@
+<h2>Clientes</h2>
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<div class="list-group">
+				<div class="form-group">
+					<div class="input-group">
+						<div>
+							<div class="input-group-addon">
+								<span class="glyhicon glyhicon-search" aria-hidden="true"></span>
+							</div>
+							<input type="text" ng-model="searchCustomer" class="form-control" placeholder="encontrar cliente">
+						</div>
+						<br>
+						<a href="#/customer" class="btn btn-info">Novo Cliente</a>
+					</div>
+				</div>
+				<br>
+				<div ng-controller="CustomerController as customerController">	
+					<div ng-repeat="customer in customerController.customers | filter: searchCustomer">
+						<a ng-href="#/editcustomer/{{customer.$id}}">
+						<div class="list-group-item">
+							<div class="row-content">
+								<h6 class="list-group-item-heading">{{customer.name}}</h6>
+								<span class="list-group-item-text">
+									{{customer.birth | limitTo: 100}}{{product.description.length > 100 ? "..." : ""}}
+								</span>
+							</div>
+							<div class="payment">
+								<div>X</div>
+							</div>
+						</div>
+						</a>
+						<div class="list-group-separator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

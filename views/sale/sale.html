@@ -1,0 +1,52 @@
+<div ng-controller="SaleController as saleController">
+  <h2>Produtos</h2>
+  <div class="row" style="height: 440px;overflow: scroll;">
+    <div class="col-sm-6 col-md-3" ng-repeat="product in saleController.products">
+      <a ng-click="saleController.addItem(product)">        
+        <div class="thumbnail">
+          <img src="..." alt="...">
+          <div class="caption">
+            <h3>{{product.name}}</h3>
+            <small>
+              {{product.description | limitTo: 40}}{{product.description.length > 40 ? "..." : ""}}
+            </small>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <h2>Itens escolhidos</h2>
+  <div>
+    <ul class="list-group" ng-repeat="item in saleController.items">
+      <li class="list-group-item">
+        <div>
+          {{item.name}}
+          Quantidade:
+          <input type="text" size="5" value="1">
+          <a ng-click="saleController.removeItem(item)">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+          </a>
+        </div>
+      </li>
+    </ul> 
+  </div>
+  <h2>
+    Aluno {{saleController.customer.name}} - {{saleController.customer.grade}}
+    <div>
+      <span class="glyhicon glyhicon-search" aria-hidden="true"></span>
+    </div>
+    <input type="text" id="inputSearchCustomer" ng-model="searchCustomer" class="form-control" placeholder="encontrar aluno">
+  </h2>
+  <div>
+      <ul class="list-group" ng-repeat="customer in saleController.customers | filter: searchCustomer">
+      <li class="list-group-item">
+        <div>
+          <a ng-click="saleController.selectCustomer(customer)">{{customer.name}}</a>
+        </div>
+      </li>
+    </ul> 
+  </div> 
+  <div>
+      <input type="button" ng-click="saleController.post()" value="Finalizar Venda" class="btn btn-info">
+  </div>
+</div>
