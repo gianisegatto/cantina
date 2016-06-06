@@ -1,52 +1,52 @@
 <form class="form-horizontal" ng-controller="ProductController as productController" 
 		  ng-submit="productController.put(product)">
     <fieldset>
-        <legend>Alterar Produto</legend>
+        <legend>Update Product</legend>
         <div class="form-group">
-            <label for="inputName" class="col-lg-2 control-label">Nome</label>
+            <label for="inputName" class="col-lg-2 control-label">Name</label>
             <div class="col-lg-10">
-                <input type="text" ng-model="productController.selectedProduct.name" class="form-control" id="inputName" placeholder="Nome" required>
+                <input type="text" ng-model="productController.selectedProduct.name" class="form-control" id="inputName" placeholder="Name" required>
             </div>
         </div>
         <div class="form-group">
-            <label for="textAreaDescription" class="col-lg-2 control-label">Descrição</label>
+            <label for="textAreaDescription" class="col-lg-2 control-label">Description</label>
             <div class="col-lg-10">
             	<textarea ng-model="productController.selectedProduct.description" class="form-control" rows="3" id="textAreaDescription"></textarea>
             </div>
         </div>
         <div class="form-group">
-            <label for="inputSupplier" class="col-lg-2 control-label">Fornecedor</label>
+            <label for="inputSupplier" class="col-lg-2 control-label">Vendor</label>
             <div class="col-lg-10">
-                <input ng-model="productController.selectedProduct.supplier"  type="text" class="form-control" id="inputSupplier" placeholder="Fornecedor">
+                <input ng-model="productController.selectedProduct.supplier"  type="text" class="form-control" id="inputSupplier" placeholder="Vendor">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputExpiredDate" class="col-lg-2 control-label">Data Vencimento</label>
+            <label for="inputExpiredDate" class="col-lg-2 control-label">Best Before Date</label>
             <div class="col-lg-10">
                 <input ng-model="productController.selectedProduct.expiredDate"  type="text" class="form-control" id="inputExpiredDate" placeholder="dd/mm/aaaa">
             </div>
         </div> 
         <div class="form-group">
-            <label for="inputBuyAmount" class="col-lg-2 control-label">Valor de Compra</label>
+            <label for="inputBuyAmount" class="col-lg-2 control-label">Buy Amount</label>
             <div class="col-lg-10">
-                <input ng-model="productController.selectedProduct.buyAmount"  type="text" class="form-control" id="inputBuyAmount" placeholder="Valor de Compra">
+                <input ng-model="productController.selectedProduct.buyAmount"  type="text" class="form-control" id="inputBuyAmount" placeholder="Buy Amount">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputSaleAmount" class="col-lg-2 control-label">Valor de Venda</label>
+            <label for="inputSaleAmount" class="col-lg-2 control-label">Sell Amount</label>
             <div class="col-lg-10">
-                <input ng-model="productController.selectedProduct.saleAmount"  type="text" class="form-control" id="inputSaleAmount" placeholder="Valor de Venda">
+                <input ng-model="productController.selectedProduct.saleAmount"  type="text" class="form-control" id="inputSaleAmount" placeholder="Sell Amount">
             </div>
         </div>
         <div class="form-group">
-            <label for="inputStock" class="col-lg-2 control-label">Quantidade em estoque</label>
+            <label for="inputStock" class="col-lg-2 control-label">Stock</label>
             <div class="col-lg-10">
-                <input ng-model="productController.selectedProduct.stock"  type="text" class="form-control" id="inputStock" placeholder="Quantidade em estoque">
+                <input ng-model="productController.selectedProduct.stock"  type="text" class="form-control" id="inputStock" placeholder="Stock">
             </div>
         </div>
-        <input type="submit" value="Salvar" class="btn btn-info">
+        <input type="submit" value="Save" class="btn btn-info">
         <a ng-href="#/browseproduct">
-        	<input type="button" value="Cancelar" class="btn btn-info">
+        	<input type="button" value="Cancel" class="btn btn-info">
         </a>
     </fieldset>
 </form>
