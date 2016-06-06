@@ -33,4 +33,4 @@ Note: Use this command where the code was cloned
     ```
     python -m SimpleHTTPServer 8000
     ```
-After these steps the application is running.
+After these steps, the application is running.
